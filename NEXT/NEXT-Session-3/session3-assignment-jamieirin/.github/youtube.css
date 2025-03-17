@@ -1,0 +1,125 @@
+.all {display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    ;}
+    
+    .상단1, .상단2, .상단3 { 
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .상단 {display: flex;
+        position: fixed;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    z-index:4;}
+
+    .세줄 img {
+        height: 60px; 
+        width: auto; 
+        margin-top: -9.5px;
+    }
+    
+ 
+    .youtube img {
+        height: 60px;
+        width: auto;
+    }
+
+    
+    .img {width: 80%;
+    }
+    
+    .콘텐츠영역 {display: flex;
+    flex-direction: column;
+    width: 100%;}
+    
+    .사이드콘텐츠 {display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 100px;}
+    
+    .측면 {display: flex;
+        flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 60px;
+    width: 200px;}
+    
+    .추천 {display: flex;
+            position: fixed;
+            align-items: center;
+            justify-content: flex-start;
+            width: calc(100% - 300px);
+            width: 100%;
+           background-color: white;
+            top: 60px;
+            z-index: 3;
+            padding: 10px;
+            left: 300px;
+            overflow-x: auto; 
+            white-space: nowrap;}
+    
+    .메인 {display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 15px;
+        margin-left:240px;
+        padding: 10px;
+        width: calc(100% -240px);
+        flex-grow: 1;
+        margin-top: -60px;
+        margin-left: 300px;
+    }
+    
+    .영상 {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+    
+    
+    .영상 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        border-radius: 10px;
+    }
+    
+    
+    @media (min-width:1536px) { 
+        .메인 {grid-template-columns: 
+            repeat(4, minmax(300px, 1fr));}}
+    
+    @media (min-width:1280px) and (max-width: 1535px) 
+    {.메인 {
+        grid-template-columns: 
+        repeat(auto-fill, minmax(300px, 1fr));
+       }}
+    
+    @media (min-width:1024px) and (max-width: 1279px) 
+    {.메인 {grid-template-columns:
+    repeat(auto-fill, minmax(300px, 1fr));}}
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .메인 {
+            grid-template-columns: repeat(2, minmax(280px, 1fr));
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .메인 {
+            grid-template-columns: repeat(1, minmax(280px, 1fr));
+            width: 100%;
+            margin-left: 0;
+        }
+    
+        .추천 {
+            width: 100%;
+            left: 0;
+        }
+    }
